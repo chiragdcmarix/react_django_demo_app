@@ -1,5 +1,5 @@
 # Backend (Django)
-FROM python:3.9-slim as backend
+FROM python:3.13.0b4-slim as backend
 
 WORKDIR /app
 
@@ -22,7 +22,7 @@ COPY frontend /app/
 RUN npm run build
 
 # Final Image
-FROM python:3.9-slim
+FROM python:3.13.0b4-slim
 
 WORKDIR /app
 
